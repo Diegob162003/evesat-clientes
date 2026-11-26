@@ -1,0 +1,23 @@
+# Variables de entorno (contraseñas, URLs privadas)
+.env
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+backend/evesat.db
+
+# Node / build
+node_modules/
+frontend/.output/
+frontend/.wrangler/
+frontend/.tanstack/
+frontend/.nitro/
+frontend/dist/
+
+# Sistema / editor
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,81 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-beige: var(--beige);
+  --color-ivory: var(--ivory);
+  --color-ink: var(--ink);
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: #000000;
+  --foreground: #FFF8EE;
+  --card: #1A1A1A;
+  --card-foreground: #FFF8EE;
+  --popover: #1A1A1A;
+  --popover-foreground: #FFF8EE;
+  --primary: #D4AF6A;
+  --primary-foreground: #000000;
+  --secondary: #1A1A1A;
+  --secondary-foreground: #FFF8EE;
+  --muted: #141414;
+  --muted-foreground: #C9BFAE;
+  --accent: #E6C98A;
+  --accent-foreground: #000000;
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: rgba(212, 175, 106, 0.22);
+  --input: #141414;
+  --ring: #D4AF6A;
+  --gold: #D4AF6A;
+  --gold-soft: #E6C98A;
+  --beige: #F2E6CF;
+  --ivory: #FFF8EE;
+  --ink: #000000;
+}
+
+.dark {
+  --background: oklch(0.14 0.005 60);
+  --foreground: oklch(0.95 0.02 80);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, .serif { font-family: var(--font-serif); letter-spacing: 0.01em; }
+}
